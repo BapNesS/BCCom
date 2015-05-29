@@ -1,0 +1,24 @@
+{
+  "name": "BCCom",
+  "version": "0.1",
+  "homepage": "https://github.com/BapNesS/BCCom",
+  "authors": [
+    "Baptiste Carlier <contact@baptistecarlier.com>"
+  ],
+  "description": "BaptisteCarlier.com avec Polymer 1.+",
+  "keywords": [
+    "polymer"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}
