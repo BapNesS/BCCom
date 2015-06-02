@@ -1,7 +1,29 @@
 html, body {
     height: 100%;
     margin: 0;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
 }
 paper-scroll-header-panel {
     height: 100%;
 }
+
+paper-menu iron-icon {
+  margin: 0 12px 2px 0;
+}
+
+paper-menu paper-item:hover {
+    color: #dd2c00;
+}
+
+.drawerContainer {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+    background-color: #fff;
+}
+
+#mainContainer {
+    background-color: #f1f1f1;
+    padding: 20px 20px 40px 68px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+} 
