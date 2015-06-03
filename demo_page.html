@@ -29,8 +29,8 @@
     <link rel="import" href="./custom_components/bcr-header/bcr-header.html">
 
     <!-- 3. Get the styles -->
-    <link rel="import" href="my-theme-bcr.html">
-    <link shim-shadowdom rel="stylesheet" href="./css/main.css">
+    <link rel="import" href="my-theme.html">
+    <link shim-shadowdom rel="stylesheet" href="./static/css/main.css">
     
     
   <style is="custom-style">
@@ -83,7 +83,7 @@
 
 <paper-drawer-panel>
     <div drawer id="drawerContainer">
-        <bcr-header pictureurl="http://www.baptistecarlier.com/static/images/photo.jpg" first="Baptiste" last="Carlier" age="28" city="Villeneuve d'Ascq" country="France"></bcr-header>
+        <bcr-header first="Baptiste" last="Carlier" age="28" city="Villeneuve d'Ascq" country="France"></bcr-header>
         <paper-menu selected="{{route}}" valueattr="data-route">
             <paper-item data-route="accueil">
                 <a href="/BCCom/"><iron-icon icon="home"></iron-icon> Accueil</a>
@@ -114,7 +114,7 @@
                 <p>Actif sur certains r&eacute;seaux sociaux, vous pourrez me retrouver sur <a href="http://plus.google.com/+BaptisteCarlier" target="_blank">Google+</a>, <a href="http://fr.viadeo.com/fr/profile/baptiste.carlier1" target="_blank">Viadeo</a> ou encore <a href="http://twitter.com/bapness" target="_blank">Twitter</a>.
 
                 <h2>Polymer</h2>
-                <p>Ce site est fabriqu&eacute; &agrave; l'aide de Polymer 1.+ et me sert de vitrine pour montrer certaines possibilités d'offre ce framework. Les sources sont d'ailleurs presque toutes disponible sur mon repository GitHub.</p>
+                <p>Ce site est fabriqu&eacute; &agrave; l'aide de Polymer 1.+ et me sert de vitrine pour montrer certaines possibilités d'offre ce framework. Les sources sont d'ailleurs presque toutes disponibles sur mon repository GitHub.</p>
 
                 <p style="text-align: center;">
                     <a href="http://www.polymer-project.org/" target="_blank"><paper-button raised class="colored buttonWithIcon"><iron-icon icon="polymer"></iron-icon>Polymer Project</paper-button></a>
@@ -140,6 +140,10 @@
     });
 
     </script>
+
+    <!-- Routing -->
+    <script src="./bower_components/page.js/page.js"></script>
+    <script src="./static/js/routing.js"></script>
     
 </body>
 </html>
