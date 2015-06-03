@@ -1,0 +1,123 @@
+<!--
+`bcr-header` is custom header component.
+-->
+
+<link href="../../bower_components/polymer/polymer.html" rel="import">
+<link href="../../bower_components/iron-icon/iron-icon.html" rel="import">
+
+<dom-module id="bcr-header">
+
+  <style>
+        .bcrHeader {
+            width: 256px;
+            height: 256px;
+        }
+
+        .bcrHeaderPicture {
+            position: relative;
+            margin-left: 68px;
+            top: 25px;
+            width:120px;
+            height:120px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            @apply(--bcr-header-picture-theme)
+        }
+
+        .bcrHeaderInfos {
+            text-align: center;
+            position: relative;
+            top: 25px;
+            margin-left: 28px;
+            width: 200px;
+            height: 92px;
+            border-bottom: 1px #E3E3E3 solid;
+        }
+
+        .bcrHeaderInfos p {
+            line-height: 20px;
+            font-size: 12px;
+            margin: 0px;
+            padding 0px;
+            font-family: Roboto, 'Helvetica Neue', Helvetica, Arial;
+            white-space: nowrap;
+        }
+
+        .bcrHeaderInfos p.name {
+            padding-top: 10px;
+            line-height: 32px;
+            font-size: 16px;
+        }
+
+        .location a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .location a:hover, .location a:focus {
+            @apply(--bcr-header-link-hover)
+        }
+
+        .location iron-icon {
+            width: 15px;
+            height: 15px;
+            margin-bottom: 2px;
+            margin-right: 3px;
+        }
+  </style>
+
+  <template>
+      
+
+    <div class="bcrHeader">
+
+        <div class="bcrHeaderPicture"></div>
+
+        <div class="bcrHeaderInfos">
+            <p class="name">{{fullName}}</p>
+            <p class="age"><span>{{age}}</span> ans</p>
+            <p class="location"><a href="{{gmapsLink}}" target="_blank"><iron-icon icon="room"></iron-icon><span>{{place}}</span></a></p>
+        </div>
+
+    </div>
+
+  </template>
+
+</dom-module>
+
+<script>
+
+    Polymer({
+        is: 'bcr-header',
+        properties: {
+            pictureurl: String,
+            first: String,
+            last: String,
+            age: String,
+            city: String,
+            country: String,
+            fullName: {
+                type: String,
+                computed: 'computeFullName(first, last)'
+            },
+            place: {
+                type: String,
+                computed: 'computePlace(city, country)'
+            },
+            gmapsLink: {
+                type: String,
+                computed: 'computeGmapsLink(place)'
+            }
+        },
+        computeFullName: function(first, last) {
+          return first + ' ' + last.toUpperCase();
+        },
+        computePlace: function(city, country) {
+          return city + ', ' + country;
+        },
+        computeGmapsLink: function(place) {
+          return 'https://www.google.com/maps?q='+place;
+        }
+    });
+
+</script>
