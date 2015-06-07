@@ -25,8 +25,8 @@
     <link rel="import" href="./bower_components/iron-pages/iron-pages.html">
     
     
-    <link rel="import" href="./custom_components/bcr-copyright/bcr-copyright.html">
-    <link rel="import" href="./custom_components/bcr-header/bcr-header.html">
+    <link rel="import" href="./bower_components/ness-copyright/ness-copyright.html">
+    <link rel="import" href="./bower_components/ness-drawer-header/ness-drawer-header.html">
 
     <!-- 3. Get the styles -->
     <link rel="import" href="my-theme.html">
@@ -83,7 +83,7 @@
 
 <paper-drawer-panel>
     <div drawer id="drawerContainer">
-        <bcr-header first="Baptiste" last="Carlier" age="28" city="Villeneuve d'Ascq" country="France"></bcr-header>
+        <ness-drawer-header first="Baptiste" last="Carlier" age="28" city="Villeneuve d'Ascq" country="France"></ness-drawer-header>
         <paper-menu selected="{{route}}" valueattr="data-route">
             <paper-item data-route="accueil">
                 <a href="/BCCom/"><iron-icon icon="home"></iron-icon> Accueil</a>
@@ -120,7 +120,7 @@
                     <a href="http://www.polymer-project.org/" target="_blank"><paper-button raised class="colored buttonWithIcon"><iron-icon icon="polymer"></iron-icon>Polymer Project</paper-button></a>
                     <a href="https://github.com/bapness/BCCom/" target="_blank"><paper-button raised class="colored buttonWithIcon"><iron-icon icon="file-download"></iron-icon>GitHub</paper-button></a>
                 </p>
-                <bcr-copyright begindate="2014" enddate="2015" name="BaptisteCarlier.com" href="http://www.baptistecarlier.com/"></bcr-copyright>
+                <ness-copyright begindate="2014" enddate="2015" name="BaptisteCarlier.com" href="http://www.baptistecarlier.com/"></ness-copyright>
             </div>
         </paper-scroll-header-panel>
     </div>
