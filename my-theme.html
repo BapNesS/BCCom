@@ -1,15 +1,86 @@
 <style is="custom-style">
-  ness-drawer-header {
-    --ness-drawer-header-picture-theme: {
-      background-image: url('./static/images/photo.jpg');
-    };
-    --ness-drawer-header-link-hover: {
-      color: #dd2c00;
-    };
-  }
-  ness-copyright {
-    --ness-copyright-link: {
-      color: #dd2c00;
-    };
-  }
+    :root {
+        --accent-color: #dd2c00;
+        --pro-color: #00838f;
+        --forma-color: #ab1556;
+        --sup-color: #558a2f;
+        --header-tall-color: #dd2c00;
+        --header-condensed-color: #dd2c00;
+    }
+    ness-drawer-header {
+        --ness-drawer-header-picture-theme: {
+            background-image: url('./static/images/photo.jpg');
+        };
+        --ness-drawer-header-link-hover: {
+            color: var(--accent-color);
+        };
+    }
+    ness-copyright {
+        --ness-copyright-link: {
+            color: var(--accent-color);
+        };
+    }
+    paper-scroll-header-panel {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--paper-grey-200, #eee);
+        /* background for toolbar when it is at its full size */
+        --paper-scroll-header-panel-full-header: {
+            background-color: var(--header-tall-color);
+            background-image: url("https://lh3.googleusercontent.com/-cHOMzPYy7TY/VS-3Rl3UvpI/AAAAAAABjWk/7yZZkmGkIr8/s1500-fcrop64=1,00000d0dffffea3d/XIBPemROQ9iJdUMOOBmG_IMG_1863.jpg");
+        };
+        /* background for toolbar when it is condensed */
+        --paper-scroll-header-panel-condensed-header: {
+            background-color: var(--header-condensed-color);
+        };
+    }
+    paper-toolbar {
+        /* custom toolbar height */
+        height: 256px;
+        background-color: transparent;
+        overflow: visible;
+    }
+
+    paper-radio-button.pro {
+      --paper-radio-button-checked-color: var(--pro-color);
+      --paper-radio-button-checked-ink-color: var(--pro-color);
+      --paper-radio-button-unchecked-color: var(--pro-color);
+      --paper-radio-button-unchecked-ink-color: var(--pro-color);
+    }
+
+    paper-radio-button.sup {
+      --paper-radio-button-checked-color: var(--sup-color);
+      --paper-radio-button-checked-ink-color: var(--forma-color);
+      --paper-radio-button-unchecked-color: var(--sup-color);
+      --paper-radio-button-unchecked-ink-color: var(--sup-color);
+    }
+
+    paper-radio-button.forma {
+      --paper-radio-button-checked-color: var(--forma-color);
+      --paper-radio-button-checked-ink-color: var(--forma-color);
+      --paper-radio-button-unchecked-color: var(--forma-color);
+      --paper-radio-button-unchecked-ink-color: var(--forma-color);
+    }
+
+    paper-checkbox {
+      --paper-checkbox-unchecked-color: var(--accent-color);
+    --paper-checkbox-unchecked-ink-color: var(--accent-color);
+    --paper-checkbox-checked-color: var(--accent-color);
+    --paper-checkbox-checked-ink-color: var(--accent-color);
+    }
+
+    ness-resume-item.pro {
+      --ness-resume-item-color: var(--pro-color);
+    }
+
+    ness-resume-item.sup {
+      --ness-resume-item-color: var(--sup-color);
+    }
+
+    ness-resume-item.forma {
+      --ness-resume-item-color: var(--forma-color);
+    }
 </style>

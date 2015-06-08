@@ -14,6 +14,22 @@ paper-scroll-header-panel {
     }
 }
 
+
+
+
+paper-toolbar paper-icon-button {
+    margin: 0 8px;
+}
+
+paper-toolbar .title {
+    margin-left: 50px;
+}
+
+paper-toolbar .title h1 {
+    font-size: 32px;
+}
+
+
 paper-menu iron-icon {
   margin: 0 12px 2px 0;
 }
@@ -85,7 +101,7 @@ paper-button.buttonWithIcon iron-icon {
     line-height: 24px;
 } 
 
-#mainContainer div {
+#contentContainer {
     padding-top: 30px;
 }
 
@@ -93,4 +109,10 @@ paper-button.buttonWithIcon iron-icon {
 	#mainContainer {
 		padding: 20px 20px 20px 20px;
 	}
+}
+
+/* **************** PAPER-RADIO-BUTTON & PAPER-CHECKBOX **************** */
+
+paper-radio-button, paper-checkbox {
+    padding: 20px;
 }
