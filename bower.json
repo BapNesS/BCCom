@@ -32,6 +32,7 @@
     "page.js": "~1.6.3",
     "iron-pages": "PolymerElements/iron-pages#^1.0.0",
     "iron-component-page": "PolymerElements/iron-component-page#~1.0.4",
+    "ness-drawer-header": "BapNesS/ness-drawer-header#~0.0.1",
     "ness-copyright": "BapNesS/ness-copyright#~0.0.3",
     "ness-resume-item": "BapNesS/ness-copyright#~0.0.1",
     "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.1",
