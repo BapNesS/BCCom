@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>BaptisteCarlier.com</title>
+
+    <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
+    <script src="./bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+    <!-- 2. Use an HTML Import to bring in some elements. -->
+    <link rel="import" href="./bower_components/polymer/polymer.html">
+    <link rel="import" href="./bower_components/paper-item/paper-item.html">
+    <link rel="import" href="./bower_components/paper-menu/paper-menu.html">
+    <link rel="import" href="./bower_components/paper-styles/paper-styles.html">
+    <link rel="import" href="./bower_components/paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="./bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+    <link rel="import" href="./bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="./bower_components/paper-button/paper-button.html">
+    <link rel="import" href="./bower_components/iron-icon/iron-icon.html">
+    <link rel="import" href="./bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="./bower_components/iron-pages/iron-pages.html">
+    <link rel="import" href="./bower_components/paper-radio-button/paper-radio-button.html">
+    <link rel="import" href="./bower_components/paper-checkbox/paper-checkbox.html">
+    
+    <link rel="import" href="./bower_components/ness-copyright/ness-copyright.html">
+    <link rel="import" href="./bower_components/ness-drawer-header/ness-drawer-header.html">
+    <link rel="import" href="./bower_components/ness-resume-item/ness-resume-item.html">
+    <link rel="import" href="./bower_components/ness-project-card/ness-project-card.html">
+
+    <!-- 3. Configure your routes here -->
+    <link rel="import" href="app/elements/routing.html">
+    
+    <!-- 4. Get the styles -->
+    <link shim-shadowdom rel="stylesheet" href="./static/css/main.css">
+    <link rel="import" href="my-theme.html">
+    
+    
+  <style is="custom-style">
+
+  </style>
+    
+</head>
+<body unresolved>
+
+  <template is="dom-bind" id="app">
+      
+<paper-drawer-panel>
+    <div drawer id="drawerContainer">
+        <ness-drawer-header first="Baptiste" last="Carlier" age="28" city="Villeneuve d'Ascq" country="France"></ness-drawer-header>
+        <paper-menu selected="{{route}}" attr-for-selected="data-route">
+            <paper-item>
+                <a data-route="accueil" href="/BCCom/"><iron-icon icon="home"></iron-icon> Accueil</a>
+            </paper-item>
+            <paper-item>
+                <a data-route="cv" href="/BCCom/cv"><iron-icon icon="account-circle"></iron-icon> Curriculum vit&aelig;</a>
+            </paper-item>
+            <paper-item data-route="realisations">
+                <a data-route="realisations" href="/BCCom/realisations"><iron-icon icon="folder-open"></iron-icon> R&eacute;alisations</a>
+            </paper-item>
+            <paper-item>
+                <iron-icon icon="link"></iron-icon> Liens
+            </paper-item>
+        </paper-menu>
+    </div>
+    <div main>
+        <iron-pages attr-for-selected="data-route" selected="{{route}}">
+            <section data-route="accueil">
+            
+                
+                <paper-scroll-header-panel condenses keep-condensed-header header-height="256" condensed-header-height="64">
+                    <paper-toolbar class="tall">
+                        <paper-button icon="menu" paper-drawer-toggle>&raquo;</paper-button>
+                        <div class="bottom title"><h1>Accueil</h1></div>
+                    </paper-toolbar>
+
+                    <div>
+                        <h2>&Agrave; propos</h2>
+
+                        <p>Ing&eacute;nieur d'&eacute;tude et de d&eacute;veloppement, on me qualifie souvent de technophile car je suis passionn&eacute; par les technologies web et mobiles et plus particuli&egrave;rement de Google et Android.</p>
+                        <p>Je suis aussi r&eacute;dacteur du blog <a href="http://www.googlenow.fr/" target="_blank">GoogleNow.fr</a> o&ugrave; je relate l'actualit&eacute; de l'assistant personnel de Google, disponible sur Android, Android Wear, iOS &amp; Chrome. J'ai aussi ouvert une site comparatif dédié aux smartwatches Android Wear&trade;,  <a href="http://www.awear.fr/" target="_blank">AWear.fr</a>.</p>
+                        <p>Actif sur certains r&eacute;seaux sociaux, vous pourrez me retrouver sur <a href="http://plus.google.com/+BaptisteCarlier" target="_blank">Google+</a>, <a href="http://fr.viadeo.com/fr/profile/baptiste.carlier1" target="_blank">Viadeo</a> ou encore <a href="http://twitter.com/bapness" target="_blank">Twitter</a>.
+
+                        <h2>Polymer</h2>
+                        <p>Ce site est fabriqu&eacute; &agrave; l'aide de Polymer 1.+ et me sert de vitrine pour montrer certaines possibilités d'offre cet librairie. Les sources sont d'ailleurs presque toutes disponibles sur mon repository GitHub.</p>
+
+                        <p style="text-align: center;">
+                            <a href="http://www.polymer-project.org/" target="_blank"><paper-button raised class="colored home buttonWithIcon"><iron-icon icon="polymer"></iron-icon>Polymer Project</paper-button></a>
+                            <a href="https://github.com/bapness/BCCom/" target="_blank"><paper-button raised class="colored home buttonWithIcon"><iron-icon icon="file-download"></iron-icon>GitHub</paper-button></a>
+                        </p>
+                        <ness-copyright begindate="2014" enddate="2015" name="BaptisteCarlier.com" href="http://www.baptistecarlier.com/"></ness-copyright>
+                    </div>
+                </paper-scroll-header-panel>
+            
+            </section>
+            <section data-route="cv">
+            
+                <paper-scroll-header-panel condenses keep-condensed-header header-height="256" condensed-header-height="64">
+                    <paper-toolbar class="tall">
+                        <paper-button icon="menu" paper-drawer-toggle>&raquo;</paper-button>
+                        <div class="bottom title"><h1>Curriculum vit&aelig;</h1></div>
+                    </paper-toolbar>
+
+                    <div id="contentContainer">
+                        <h2>Filtrer et trier (non fonctionnel)</h2>
+
+                        <div class="cvChronoToHide">
+                            <paper-radio-button class="pro" checked Disabled>Parcours professionnel</paper-radio-button>
+                            <paper-radio-button class="forma" checked Disabled>Stages et laborataoire</paper-radio-button>
+                            <paper-radio-button class="sup" checked Disabled>Enseignement sup&eacute;rieur</paper-radio-button>
+                            <br/>
+                            <paper-checkbox checked Disabled> Trier par type</paper-checkbox>
+                        </div>
+                        <h2>Mon parcours</h2>
+
+        <ness-resume-item class="pro" firm="Worldline, an Atos company" end="03/2014"><p>Ingénieur étude et développement :<br/>Ingénier front/back pour des sites e-commerce d'un groupe de la grande distribution, en France et à l'internationale.</p></ness-resume-item>
+
+        <ness-resume-item class="pro" firm="Alten" begin="10/2011" end="03/2014"><p>Ingénieur étude et développement :<br/>En prestation en SSII pour des sites e-commerce d'un groupe de la grande distribution, en France et à l'internationale.</p></ness-resume-item>
+
+        <ness-resume-item class="pro" firm="Edu-Studio &amp; Tymate" begin="11/2010" end="08/2011"><p>Alternance en tant que développeur de jeu tactile sur tablette multitouch & Android.</p></ness-resume-item>
+
+        <ness-resume-item class="sup" firm="Université Lille 1 Sciences Et Technologies" begin="2010" end="2011"><p>Master 2 Informatique, spécialité E-Services.</p></ness-resume-item>
+
+        <ness-resume-item class="forma" firm="Perpetual Study" begin="03/2010" end="08/2010"><p>Stage en tant que développeur de jeu tactile sur tablette multitouch.</p></ness-resume-item>
+
+        <ness-resume-item class="sup" firm="Université Lille 1 Sciences Et Technologies" begin="2009" end="2010"><p>Master 1 Informatique, spécialité Génie Mathématiques et Informatique.</p></ness-resume-item>
+
+        <ness-resume-item class="forma" firm="LIFL" begin="09/2009" end="09/2009"><p>Stage d'un mois en laboratoire informatique au <u>FIL</u> de l'USTL en multitouch et domotique.</p></ness-resume-item>
+
+        <ness-resume-item class="forma" firm="Aéronet Référencement" begin="12/2008" end="03/2009"><p>Stage en tant qu'Assistant Référenceur.</p></ness-resume-item>
+
+        <ness-resume-item class="sup" firm="Université Lille 1 Sciences Et Technologies" begin="2008" end="2009"><p>Licence 3 Informatique, spécialité Génie Mathématiques et Informatique.</p></ness-resume-item>
+
+        <ness-resume-item class="forma" firm="Logica" begin="04/2008" end="06/2008"><p>Stage au sein de la <em>Cellule Architecture</em>.</p></ness-resume-item>
+
+        <ness-resume-item class="sup" firm="Université Lille 1 Sciences Et Technologies" begin="2006" end="2008"><p>DUT Informatique à l'IUT de Lille.</p></ness-resume-item>
+
+        <ness-resume-item class="sup" firm="Lycée Raymond Queneau" begin="2003" end="2006"><p>Baccalauréat Scientifique</p></ness-resume-item>
+
+                        <ness-copyright begindate="2014" enddate="2015" name="BaptisteCarlier.com" href="http://www.baptistecarlier.com/"></ness-copyright>
+
+                    </div>
+                </paper-scroll-header-panel>
+            
+            </section>
+            <section data-route="realisations">
+            
+                <paper-scroll-header-panel condenses keep-condensed-header header-height="256" condensed-header-height="64">
+                    <paper-toolbar class="tall">
+                        <paper-button icon="menu" paper-drawer-toggle>&raquo;</paper-button>
+                        <div class="bottom title"><h1>R&eacute;alisations</h1></div>
+                    </paper-toolbar>
+
+
+                    <div>
+
+                        <p class="intro-realisation">Voici une liste non exhaustive de mes derniers travaux personnels.</p>
+
+                        <div class="card-list">
+
+                            <ness-project-card
+                                title="GoogleNow.fr"
+                                skills='["Wordpress", "réseaux sociaux", "montages vidéos"]'
+                                link="http://www.googlenow.fr">
+                                <p><strong>Description :</strong> Site web dédié à l'assistant personnel digital <em>Google Now</em> disponible sur Android, Android Wear, iOS et Chrome. Ce blog traitent aussi de sujets généraux comme le Play Store ou Google+.</p>
+                            </ness-project-card>
+
+                            <ness-project-card
+                                title="AWear.fr"
+                                skills='["AngularJS", "GitHub", "material boostrap"]'
+                                link="http://www.awear.fr">
+                                <p><strong>Description :</strong> Site web dédié à l'univers Android Wear et aux smartwatches connectées de Google.</p>
+                            </ness-project-card>
+
+                            <ness-project-card
+                                title="Elements Polymer"
+                                skills='["Polymer", "GitHub", "Bower", "HTML/CSS", "Javascript"]'
+                                link="http://github.com/BapNesS/">
+                                <p><strong>Description :</strong> Création de ce site à l'aide de la librairie Polymer en version 1.+ et développement de plusieurs éléments utilisables avec Bower.</p>
+                            </ness-project-card>
+
+                            <ness-project-card
+                                title="Démonstrations de code Android pour Google Now"
+                                skills='["Android", "GitHub"]'
+                                link="http://github.com/BapNesS/Android-GoogleNowFrDemos">
+                                <p><strong>Description :</strong> Les samples de code Android compatibles pour <em>Google Now</em> (alias <em>Recherche Google</em>).</p>
+                            </ness-project-card>
+
+                            <ness-project-card
+                                title="BroFist.it"
+                                skills='["AngularJS", "GitHub", "twitter bootstrap", "material boostrap"]'
+                                link="http://www.brofist.it">
+                                <p><strong>Description :</strong> Site web monté par un collègue et utilisé pour effectuer des calculs sur le jeu-vidéo <em>Clash of Clans</em>.<br/>Le but de ce site est aussi de monter en compétences sur certaines technologies.</p>
+                            </ness-project-card>
+
+                            <ness-project-card
+                                title="MyWarranties"
+                                skills='["Android", "graphisme"]'
+                                link="http://play.google.com/store/apps/details?id=com.baptistecarlier.android.warranty">
+                                <p><strong>Description :</strong> Une application Android payantes qui vous aidera à gérer vos garanties: ajoutez, liste, gardez-les rapidement.</p>
+                            </ness-project-card>
+
+                            <ness-project-card
+                                title="Randomizer"
+                                skills='["Android"]'
+                                link="http://play.google.com/store/apps/details?id=fr.nesscorp.android.felimination">
+                                <p><strong>Description :</strong> Randomizer est une application Android qui permet de choisir un joueur en éliminant tous les autres.</p>
+                            </ness-project-card>
+
+
+                        </div>
+                        <div style="clear: both;"></div>
+                        <ness-copyright begindate="2014" enddate="2015" name="BaptisteCarlier.com" href="http://www.baptistecarlier.com/"></ness-copyright>
+                    </div>
+                </paper-scroll-header-panel>
+            
+            </section>
+        </iron-pages>
+    </div>
+</paper-drawer-panel>
+    
+    
+
+    <script>
+
+    // custom transformation: scale header's title
+    var titleStyle = document.querySelector('.title').style;
+    addEventListener('paper-header-transform', function(e) {
+        var d = e.detail;
+        var m = d.height - d.condensedHeight;
+        var scale = Math.max(0.75, (m - d.y) / (m / 0.25)  + 0.75);
+        titleStyle.transform = titleStyle.webkitTransform = 'scale(' + scale + ') translateZ(0)';
+    });
+
+    </script>
+  </template>
+    
+    <!-- 5. Routing -->
+    <script src="./app/scripts/app.js"></script>
+    
+</body>
+</html>
