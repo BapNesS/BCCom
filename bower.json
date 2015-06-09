@@ -35,6 +35,7 @@
     "ness-drawer-header": "BapNesS/ness-drawer-header#~0.0.1",
     "ness-copyright": "BapNesS/ness-copyright#~0.0.3",
     "ness-resume-item": "BapNesS/ness-copyright#~0.0.1",
+    "ness-project-card": "BapNesS/ness-project-card#~0.0.1",
     "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.1",
     "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.1"
   }

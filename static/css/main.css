@@ -69,7 +69,7 @@ h3 {
 
 
 
-paper-button {
+paper-button.home {
 	text-transform: none;
 }
 paper-button.colored {
@@ -115,4 +115,9 @@ paper-button.buttonWithIcon iron-icon {
 
 paper-radio-button, paper-checkbox {
     padding: 20px;
+}
+
+/* **************** REALISATIONS **************** */
+.intro-realisation {
+    margin-top: 30px;
 }

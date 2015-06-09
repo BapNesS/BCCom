@@ -27,6 +27,7 @@
     
     <link rel="import" href="./bower_components/ness-copyright/ness-copyright.html">
     <link rel="import" href="./bower_components/ness-drawer-header/ness-drawer-header.html">
+    <link rel="import" href="./bower_components/ness-project-card/ness-project-card.html">
 
     <!-- 3. Get the styles -->
     <link shim-shadowdom rel="stylesheet" href="./static/css/main.css">
@@ -34,7 +35,6 @@
     
     
   <style is="custom-style">
-
   </style>
     
 </head>
@@ -65,8 +65,65 @@
                 <div class="bottom title"><h1>R&eacute;alisations</h1></div>
             </paper-toolbar>
             
+            
             <div>
-                <p>Voici une liste non exhaustive de mes derniers travaux personnels.</p>
+                
+                <p class="intro-realisation">Voici une liste non exhaustive de mes derniers travaux personnels.</p>
+                
+                <div class="card-list">
+                    
+                    <ness-project-card
+                        title="GoogleNow.fr"
+                        skills='["Wordpress", "réseaux sociaux", "montages vidéos"]'
+                        link="http://www.googlenow.fr">
+                        <p><strong>Description :</strong> Site web dédié à l'assistant personnel digital <em>Google Now</em> disponible sur Android, Android Wear, iOS et Chrome. Ce blog traitent aussi de sujets généraux comme le Play Store ou Google+.</p>
+                    </ness-project-card>
+
+                    <ness-project-card
+                        title="AWear.fr"
+                        skills='["AngularJS", "GitHub", "material boostrap"]'
+                        link="http://www.awear.fr">
+                        <p><strong>Description :</strong> Site web dédié à l'univers Android Wear et aux smartwatches connectées de Google.</p>
+                    </ness-project-card>
+
+                    <ness-project-card
+                        title="Elements Polymer"
+                        skills='["Polymer", "GitHub", "Bower", "HTML/CSS", "Javascript"]'
+                        link="http://github.com/BapNesS/">
+                        <p><strong>Description :</strong> Création de ce site à l'aide de la librairie Polymer en version 1.+ et développement de plusieurs éléments utilisables avec Bower.</p>
+                    </ness-project-card>
+
+                    <ness-project-card
+                        title="Démonstrations de code Android pour Google Now"
+                        skills='["Android", "GitHub"]'
+                        link="http://github.com/BapNesS/Android-GoogleNowFrDemos">
+                        <p><strong>Description :</strong> Les samples de code Android compatibles pour <em>Google Now</em> (alias <em>Recherche Google</em>).</p>
+                    </ness-project-card>
+
+                    <ness-project-card
+                        title="BroFist.it"
+                        skills='["AngularJS", "GitHub", "twitter bootstrap", "material boostrap"]'
+                        link="http://www.brofist.it">
+                        <p><strong>Description :</strong> Site web monté par un collègue et utilisé pour effectuer des calculs sur le jeu-vidéo <em>Clash of Clans</em>.<br/>Le but de ce site est aussi de monter en compétences sur certaines technologies.</p>
+                    </ness-project-card>
+
+                    <ness-project-card
+                        title="MyWarranties"
+                        skills='["Android", "graphisme"]'
+                        link="http://play.google.com/store/apps/details?id=com.baptistecarlier.android.warranty">
+                        <p><strong>Description :</strong> Une application Android payantes qui vous aidera à gérer vos garanties: ajoutez, liste, gardez-les rapidement.</p>
+                    </ness-project-card>
+
+                    <ness-project-card
+                        title="Randomizer"
+                        skills='["Android"]'
+                        link="http://play.google.com/store/apps/details?id=fr.nesscorp.android.felimination">
+                        <p><strong>Description :</strong> Randomizer est une application Android qui permet de choisir un joueur en éliminant tous les autres.</p>
+                    </ness-project-card>
+
+                    
+                </div>
+                <div style="clear: both;"></div>
                 <p>...</p>
                 <ness-copyright begindate="2014" enddate="2015" name="BaptisteCarlier.com" href="http://www.baptistecarlier.com/"></ness-copyright>
             </div>
