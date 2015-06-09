@@ -7,3 +7,4 @@ Les travaux sont en cours et le site en ligne est encore basée sur une ancienne
 - [ness-drawer-header](https://github.com/BapNesS/ness-drawer-header)
 - [ness-copyright](https://github.com/BapNesS/ness-copyright)
 - [ness-resume-item](https://github.com/BapNesS/ness-resume-item)
+- [ness-project-card](https://github.com/BapNesS/ness-project-card)
