@@ -32,7 +32,7 @@
     <link rel="import" href="./bower_components/ness-project-card/ness-project-card.html">
 
     <!-- 3. Configure your routes here -->
-    <link rel="import" href="app/elements/routing.html">
+    <link rel="import" href="./elements/routing.html">
     
     <!-- 4. Get the styles -->
     <link shim-shadowdom rel="stylesheet" href="./static/css/main.css">
@@ -46,7 +46,7 @@
 </head>
 <body unresolved>
 
-  <template is="dom-bind" id="app">
+<template is="dom-bind" id="app">
       
 <paper-drawer-panel>
     <div drawer id="drawerContainer">
@@ -104,44 +104,56 @@
                         <div class="bottom title"><h1>Curriculum vit&aelig;</h1></div>
                     </paper-toolbar>
 
-                    <div id="contentContainer">
-                        <h2>Filtrer et trier (non fonctionnel)</h2>
+                    <div>
+                        <h2>Filtrer et trier</h2>
 
                         <div class="cvChronoToHide">
-                            <paper-radio-button class="pro" checked Disabled>Parcours professionnel</paper-radio-button>
-                            <paper-radio-button class="forma" checked Disabled>Stages et laborataoire</paper-radio-button>
-                            <paper-radio-button class="sup" checked Disabled>Enseignement sup&eacute;rieur</paper-radio-button>
-                            <br/>
-                            <paper-checkbox checked Disabled> Trier par type</paper-checkbox>
+                            <paper-radio-button class="pro" id="radioPro">Parcours professionnel</paper-radio-button>
+                            <paper-radio-button class="forma" id="radioForma">Stages et laborataoire</paper-radio-button>
+                            <paper-radio-button class="sup" id="radioSup">Enseignement sup&eacute;rieur</paper-radio-button>
+                        </div
+                            
+                        <br/>
+                        <paper-checkbox id="checkboxSort"> Trier par type</paper-checkbox>
+                        
+                        <h2 class="cvChronoToHide">Mon parcours</h2>
+
+                        <div id="listXp">
+
+                            <h2 id="xp-20-1" class="cvDisable cvChronoToShow">Parcours professionnel</h2>
+
+                            <ness-resume-item id="xp-1-2" class="cvItem pro" firm="Worldline, an Atos company" end="03/2014"><p>Ingénieur étude et développement :<br/>Ingénier front/back pour des sites e-commerce d'un groupe de la grande distribution, en France et à l'internationale.</p></ness-resume-item>
+
+                            <ness-resume-item id="xp-2-3" class="cvItem pro" firm="Alten" begin="10/2011" end="03/2014"><p>Ingénieur étude et développement :<br/>En prestation en SSII pour des sites e-commerce d'un groupe de la grande distribution, en France et à l'internationale.</p></ness-resume-item>
+
+                            <ness-resume-item id="xp-3-4" class="cvItem pro" firm="Edu-Studio &amp; Tymate" begin="11/2010" end="08/2011"><p>Alternance en tant que développeur de jeu tactile sur tablette multitouch & Android.</p></ness-resume-item>
+
+                            <h2 id="xp-20-10" class="cvDisable cvChronoToShow">Stages et laborataoire</h2>
+
+                            <ness-resume-item id="xp-4-11" class="cvItem sup" firm="Université Lille 1 Sciences Et Technologies" begin="2010" end="2011"><p>Master 2 Informatique, spécialité E-Services.</p></ness-resume-item>
+
+                            <h2 id="xp-20-5" class="cvDisable cvChronoToShow">Enseignement supérieur</h2>
+
+                            <ness-resume-item id="xp-5-6" class="cvItem forma" firm="Perpetual Study" begin="03/2010" end="08/2010"><p>Stage en tant que développeur de jeu tactile sur tablette multitouch.</p></ness-resume-item>
+
+                            <ness-resume-item id="xp-6-12" class="cvItem sup" firm="Université Lille 1 Sciences Et Technologies" begin="2009" end="2010"><p>Master 1 Informatique, spécialité Génie Mathématiques et Informatique.</p></ness-resume-item>
+
+                            <ness-resume-item id="xp-7-7" class="cvItem forma" firm="LIFL" begin="09/2009" end="09/2009"><p>Stage d'un mois en laboratoire informatique au <u>FIL</u> de l'USTL en multitouch et domotique.</p></ness-resume-item>
+
+                            <ness-resume-item id="xp-8-8" class="cvItem forma" firm="Aéronet Référencement" begin="12/2008" end="03/2009"><p>Stage en tant qu'Assistant Référenceur.</p></ness-resume-item>
+
+                            <ness-resume-item id="xp-9-13" class="cvItem sup" firm="Université Lille 1 Sciences Et Technologies" begin="2008" end="2009"><p>Licence 3 Informatique, spécialité Génie Mathématiques et Informatique.</p></ness-resume-item>
+
+                            <ness-resume-item id="xp-10-9" class="cvItem forma" firm="Logica" begin="04/2008" end="06/2008"><p>Stage au sein de la <em>Cellule Architecture</em>.</p></ness-resume-item>
+
+                            <ness-resume-item id="xp-11-14" class="cvItem sup" firm="Université Lille 1 Sciences Et Technologies" begin="2006" end="2008"><p>DUT Informatique à l'IUT de Lille.</p></ness-resume-item>
+
+                            <ness-resume-item id="xp-12-15" class="cvItem sup" firm="Lycée Raymond Queneau" begin="2003" end="2006"><p>Baccalauréat Scientifique</p></ness-resume-item>
+
                         </div>
-                        <h2>Mon parcours</h2>
-
-        <ness-resume-item class="pro" firm="Worldline, an Atos company" end="03/2014"><p>Ingénieur étude et développement :<br/>Ingénier front/back pour des sites e-commerce d'un groupe de la grande distribution, en France et à l'internationale.</p></ness-resume-item>
-
-        <ness-resume-item class="pro" firm="Alten" begin="10/2011" end="03/2014"><p>Ingénieur étude et développement :<br/>En prestation en SSII pour des sites e-commerce d'un groupe de la grande distribution, en France et à l'internationale.</p></ness-resume-item>
-
-        <ness-resume-item class="pro" firm="Edu-Studio &amp; Tymate" begin="11/2010" end="08/2011"><p>Alternance en tant que développeur de jeu tactile sur tablette multitouch & Android.</p></ness-resume-item>
-
-        <ness-resume-item class="sup" firm="Université Lille 1 Sciences Et Technologies" begin="2010" end="2011"><p>Master 2 Informatique, spécialité E-Services.</p></ness-resume-item>
-
-        <ness-resume-item class="forma" firm="Perpetual Study" begin="03/2010" end="08/2010"><p>Stage en tant que développeur de jeu tactile sur tablette multitouch.</p></ness-resume-item>
-
-        <ness-resume-item class="sup" firm="Université Lille 1 Sciences Et Technologies" begin="2009" end="2010"><p>Master 1 Informatique, spécialité Génie Mathématiques et Informatique.</p></ness-resume-item>
-
-        <ness-resume-item class="forma" firm="LIFL" begin="09/2009" end="09/2009"><p>Stage d'un mois en laboratoire informatique au <u>FIL</u> de l'USTL en multitouch et domotique.</p></ness-resume-item>
-
-        <ness-resume-item class="forma" firm="Aéronet Référencement" begin="12/2008" end="03/2009"><p>Stage en tant qu'Assistant Référenceur.</p></ness-resume-item>
-
-        <ness-resume-item class="sup" firm="Université Lille 1 Sciences Et Technologies" begin="2008" end="2009"><p>Licence 3 Informatique, spécialité Génie Mathématiques et Informatique.</p></ness-resume-item>
-
-        <ness-resume-item class="forma" firm="Logica" begin="04/2008" end="06/2008"><p>Stage au sein de la <em>Cellule Architecture</em>.</p></ness-resume-item>
-
-        <ness-resume-item class="sup" firm="Université Lille 1 Sciences Et Technologies" begin="2006" end="2008"><p>DUT Informatique à l'IUT de Lille.</p></ness-resume-item>
-
-        <ness-resume-item class="sup" firm="Lycée Raymond Queneau" begin="2003" end="2006"><p>Baccalauréat Scientifique</p></ness-resume-item>
 
                         <ness-copyright begindate="2014" enddate="2015" name="BaptisteCarlier.com" href="http://www.baptistecarlier.com/"></ness-copyright>
-
+                        
                     </div>
                 </paper-scroll-header-panel>
             
@@ -222,24 +234,13 @@
     </div>
 </paper-drawer-panel>
     
-    
-
     <script>
 
-    // custom transformation: scale header's title
-    var titleStyle = document.querySelector('.title').style;
-    addEventListener('paper-header-transform', function(e) {
-        var d = e.detail;
-        var m = d.height - d.condensedHeight;
-        var scale = Math.max(0.75, (m - d.y) / (m / 0.25)  + 0.75);
-        titleStyle.transform = titleStyle.webkitTransform = 'scale(' + scale + ') translateZ(0)';
-    });
-
     </script>
-  </template>
-    
-    <!-- 5. Routing -->
-    <script src="./app/scripts/app.js"></script>
+</template>
+
+<!-- 5. Routing -->
+<script src="./static/js/app.js"></script>
     
 </body>
 </html>

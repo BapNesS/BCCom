@@ -99,10 +99,6 @@ paper-button.buttonWithIcon iron-icon {
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
-} 
-
-#contentContainer {
-    padding-top: 30px;
 }
 
 @media only screen and (max-width: 850px) {
@@ -120,4 +116,10 @@ paper-radio-button, paper-checkbox {
 /* **************** REALISATIONS **************** */
 .intro-realisation {
     margin-top: 30px;
+}
+
+
+
+.cvDisable {
+    display: none;
 }
