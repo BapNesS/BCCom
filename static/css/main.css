@@ -15,6 +15,13 @@ paper-scroll-header-panel {
 }
 
 
+/* Fix Iron-list for grid elements */
+#items.iron-list > * {
+  width: auto;
+  box-sizing: content-box;
+  position: static;
+  top: auto;
+}
 
 
 paper-toolbar paper-icon-button {

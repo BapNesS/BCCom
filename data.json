@@ -1,0 +1,44 @@
+[
+  {
+    "title": "GoogleNow.fr",
+    "skills": ["Wordpress", "réseaux sociaux", "montages vidéos"],
+    "link":"http://www.googlenow.fr",
+    "description":"Site web dédié à l'assistant personnel digital Google Now disponible sur Android, Android Wear, iOS et Chrome. Ce blog traitent aussi de sujets généraux comme le Play Store ou Google+."
+  },
+  {
+    "title": "AWear.fr",
+    "skills": ["AngularJS", "GitHub", "material boostrap"],
+    "link":"http://www.awear.fr",
+    "description":"Site web dédié à l'univers Android Wear et aux smartwatches connectées de Google."
+  },
+  {
+    "title": "Elements Polymer",
+    "skills": ["Polymer", "GitHub", "Bower", "HTML/CSS", "Javascript"],
+    "link":"http://github.com/BapNesS/",
+    "description":"Création de ce site à l'aide de la librairie Polymer en version 1.+ et développement de plusieurs éléments utilisables avec Bower."
+  },
+  {
+    "title": "Démonstrations de code Android pour Google Now",
+    "skills": ["Android", "GitHub"],
+    "link":"http://github.com/BapNesS/Android-GoogleNowFrDemos",
+    "description":"Les samples de code Android compatibles pour Google Now (alias <em>Recherche Google</em>)."
+  },
+  {
+    "title": "BroFist.it",
+    "skills": ["AngularJS", "GitHub", "twitter bootstrap", "material boostrap"],
+    "link":"http://www.brofist.it",
+    "description":"Site web monté par un collègue et utilisé pour effectuer des calculs sur le jeu-vidéo Clash of Clans.\nLe but de ce site est aussi de monter en compétences sur certaines technologies."
+  },
+  {
+    "title": "MyWarranties",
+    "skills": ["Android", "graphisme"],
+    "link":"http://play.google.com/store/apps/details?id=com.baptistecarlier.android.warranty",
+    "description":"Une application Android payantes qui vous aidera à gérer vos garanties: ajoutez, liste, gardez-les rapidement."
+  },
+  {
+    "title": "Randomizer",
+    "skills": ["Android"],
+    "link":"http://play.google.com/store/apps/details?id=fr.nesscorp.android.felimination",
+    "description":"Randomizer est une application Android qui permet de choisir un joueur en éliminant tous les autres."
+  }
+]

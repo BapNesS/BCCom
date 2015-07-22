@@ -34,6 +34,8 @@
     "iron-component-page": "PolymerElements/iron-component-page#~1.0.4",
     "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.1",
     "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.1",
+    "iron-list": "PolymerElements/iron-list#^1.0.0",
+    "iron-ajax": "PolymerElements/iron-ajax#^1.0.0",
     "ness-copyright": "BapNesS/ness-copyright#~0.1.1",
     "ness-drawer-header": "BapNesS/ness-drawer-header#~0.1.1",
     "ness-project-card": "BapNesS/ness-project-card#~0.1.1",
