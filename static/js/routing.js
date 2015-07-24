@@ -22,14 +22,10 @@ function realisations() {
 
 window.addEventListener('WebComponentsReady', function(e) {
 
-    console.log("mdr");
     var headerPanel = document.querySelector('[main]');
     var pages = document.querySelector('iron-pages');
-    console.log("mdr", pages, app.route);
 
     pages.addEventListener('iron-selection', function(e) {
-        console.log("lol");
-
         // Only handle the event once
         if (e.detail && e.detail.isSelected) {
             headerPanel.scroller.scrollTop = 0;
