@@ -10,8 +10,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 function display(elems, visible) {
     
-    console.log("[display] Les 3 : ", elems, visible);
-    
     for (var i = 0; i < elems.length; ++i) {
         var item = elems[i];  
         if ( visible ) {
@@ -27,8 +25,6 @@ var checkedRadioForma = false;
 var checkedRadioSup = false;
 
 function toggleCv() {
-    
-    console.log("[toggleCv] Les 3 : ", checkedRadioPro, checkedRadioForma, checkedRadioSup);
 
     var elemAll = document.getElementsByClassName('cvItem');
     if ( !checkedRadioPro && !checkedRadioForma && !checkedRadioSup ) {
@@ -121,7 +117,6 @@ function toggleChrono(checkedChrono) {
     // See https://github.com/Polymer/polymer/issues/1381
     window.addEventListener('iron-change', function(e) {
         // imports are loaded and elements have been registered
-        console.log("iron-change", e);
         var buttonId = e.srcElement.id;
         if ( buttonId == "checkboxSort" ) {
             toggleChrono(e.srcElement.checked);
@@ -141,11 +136,17 @@ function toggleChrono(checkedChrono) {
 
     // custom transformation: scale header's title
     addEventListener('paper-header-transform', function(e) {
-        var titleStyle = document.querySelector('.title').style;
+        var titles = document.querySelectorAll('.title');
+        var titleIndex = 0;
+        if ( app.route == "cv" ) {
+            titleIndex = 1;
+        } else if ( app.route == "realisations" ) {
+            titleIndex = 2;
+        }
         var d = e.detail;
         var m = d.height - d.condensedHeight;
         var scale = Math.max(0.75, (m - d.y) / (m / 0.25)  + 0.75);
-        titleStyle.transform = titleStyle.webkitTransform = 'scale(' + scale + ') translateZ(0)';
+        titles[titleIndex].style.transform = titles[titleIndex].style.webkitTransform = 'scale(' + scale + ') translateZ(0)';
     });
 
 })(document);
