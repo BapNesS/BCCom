@@ -41,15 +41,10 @@ paper-menu iron-icon {
   margin: 0 12px 2px 0;
 }
 
-paper-menu paper-item:hover a, a {
-    color: #dd2c00;
-}
-paper-menu paper-item a, paper-menu paper-item.iron-selected:hover a {
-    color: black;
-    text-decoration: none;
-}
-a:hover {
-    color: #bb2200;
+/* Fix title */
+paper-toolbar.tall .title {
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
 }
 
 #drawerContainer {
@@ -75,27 +70,6 @@ h3 {
 }
 
 
-
-paper-button.home {
-	text-transform: none;
-}
-paper-button.colored {
-	color: #dd2c00;
-	fill: #fff;
-}
-paper-button[raised].colored {
-	background: #dd2c00;
-	color: #fff;
-}
-paper-button[raised].colored:hover {
-	background: #bb2200;
-}
-paper-button[raised].colored::shadow #ripple {
-	color: #881a00;
-}
-paper-button.buttonWithIcon iron-icon {
-    margin-right: 8px;
-}
 
 
 
