@@ -1,6 +1,6 @@
 {
   "name": "BCCom",
-  "version": "0.1",
+  "version": "0.2",
   "homepage": "https://github.com/BapNesS/BCCom",
   "authors": [
     "Baptiste Carlier <contact@baptistecarlier.com>"
@@ -39,7 +39,7 @@
     "iron-ajax": "PolymerElements/iron-ajax#^1.0.0",
     "ness-copyright": "BapNesS/ness-copyright#~0.1.1",
     "ness-drawer-header": "BapNesS/ness-drawer-header#~0.1.1",
-    "ness-project-card": "BapNesS/ness-project-card#~0.1.1",
+    "ness-project-card": "BapNesS/ness-project-card#~0.2",
     "ness-resume-item": "BapNesS/ness-resume-item#~0.1.1"
   }
 }

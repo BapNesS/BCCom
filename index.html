@@ -75,7 +75,7 @@
             <section data-route="accueil">
             
                 
-                <paper-scroll-header-panel condenses keep-condensed-header header-height="256" condensed-header-height="64">
+                <paper-scroll-header-panel condenses keep-condensed-header header-height="256" condensed-header-height="64" class="step1">
                     <paper-toolbar class="tall">
                         <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
                         <div class="bottom title"><h1>Accueil</h1></div>
@@ -102,7 +102,7 @@
             </section>
             <section data-route="cv">
             
-                <paper-scroll-header-panel condenses keep-condensed-header header-height="256" condensed-header-height="64">
+                <paper-scroll-header-panel condenses keep-condensed-header header-height="256" condensed-header-height="64" class="step2">
                     <paper-toolbar class="tall">
                         <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
                         <div class="bottom title"><h1>Curriculum vit&aelig;</h1></div>
@@ -164,7 +164,7 @@
             </section>
             <section data-route="realisations">
             
-                <paper-scroll-header-panel condenses keep-condensed-header header-height="256" condensed-header-height="64">
+                <paper-scroll-header-panel condenses keep-condensed-header header-height="256" condensed-header-height="64" class="step3">
                     <paper-toolbar class="tall">
                         <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
                         <div class="bottom title"><h1>R&eacute;alisations</h1></div>
@@ -178,13 +178,20 @@
                         <div class="card-list">
                             
                             <iron-ajax url="data.json" last-response="{{data}}" auto></iron-ajax>
-                            <iron-list items="[[data]]" as="item">
+                            <iron-list items="[[data.projects]]" as="project">
                             <template>
                                 <ness-project-card
-                                    title="[[item.title]]"
-                                    skills='[[item.skills]]'
-                                    link="[[item.link]]">
-                                    <p><strong>Description :</strong> <span>[[item.description]]</span></p>
+                                    title="[[project.name]]"
+                                    languages='[[project.languages]]'
+                                    frameworks='[[project.frameworks]]'
+                                    tools='[[project.tools]]'
+                                    is-web='[[project.platform.web]]'
+                                    is-mobile-app='[[project.platform.mobileApp]]'
+                                    is-desktop='[[project.platform.desktop]]'
+                                    is-tv='[[project.platform.tv]]'
+                                    is-wear='[[project.platform.wear]]'
+                                    link="[[project.link]]">
+                                    <p><strong>Description :</strong> <span>[[project.description]]</span></p>
                                 </ness-project-card>
                             </template>
                             </iron-list>

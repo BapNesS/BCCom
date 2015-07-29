@@ -1,6 +1,8 @@
 <style is="custom-style">
     :root {
         --accent-color: #dd2c00;
+        --darkaccent-color: #bb2200;
+        --darkeraccent-color: #881a00;
         --pro-color: #00838f;
         --forma-color: #ab1556;
         --sup-color: #558a2f;
@@ -29,12 +31,13 @@
         text-decoration: none;
     }
     a:hover {
-        color: #bb2200;
+        color: var(--darkaccent-color);
     }
+ 
     paper-button.home {
         text-transform: none;
     }
-    paper-button.colored {
+    paper-button.ness-project-card, paper-button.colored {
         color: var(--accent-color);
         fill: #fff;
     }
@@ -43,12 +46,12 @@
         color: #fff;
     }
     paper-button[raised].colored:hover {
-        background: #bb2200;
+        background: var(--darkaccent-color);
     }
     paper-button[raised].colored::shadow #ripple {
-        color: #881a00;
+        color: var(--darkeraccent-color);
     }
-    paper-button.buttonWithIcon iron-icon {
+    paper-button.ness-project-card, paper-button.buttonWithIcon iron-icon {
         margin-right: 8px;
     }
 
@@ -62,11 +65,28 @@
         /* background for toolbar when it is at its full size */
         --paper-scroll-header-panel-full-header: {
             background-color: var(--header-tall-color);
-            background-image: url("https://lh3.googleusercontent.com/-cHOMzPYy7TY/VS-3Rl3UvpI/AAAAAAABjWk/7yZZkmGkIr8/s1500-fcrop64=1,00000d0dffffea3d/XIBPemROQ9iJdUMOOBmG_IMG_1863.jpg");
         };
         /* background for toolbar when it is condensed */
         --paper-scroll-header-panel-condensed-header: {
             background-color: var(--header-condensed-color);
+        };
+    }
+
+    paper-scroll-header-panel.step1 {
+        --paper-scroll-header-panel-full-header: {
+            background-image: url("https://lh3.googleusercontent.com/-cHOMzPYy7TY/VS-3Rl3UvpI/AAAAAAABjWk/7yZZkmGkIr8/s1500-fcrop64=1,00000d0dffffea3d/XIBPemROQ9iJdUMOOBmG_IMG_1863.jpg");
+        };
+    }
+
+    paper-scroll-header-panel.step2 {
+        --paper-scroll-header-panel-full-header: {
+            background-image: url("https://www.gstatic.com/prettyearth/assets/full/2195.jpg");
+        };
+    }
+
+    paper-scroll-header-panel.step3 {
+        --paper-scroll-header-panel-full-header: {
+            background-image: url("./static/images/lucho-49.jpg");
         };
     }
     paper-toolbar {

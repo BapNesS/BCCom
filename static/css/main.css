@@ -22,6 +22,27 @@ paper-scroll-header-panel {
   position: static;
   top: auto;
 }
+ 
+paper-button.home {
+    text-transform: none;
+}
+paper-button.ness-project-card, paper-button.colored {
+    color: #dd2c00;
+    fill: #fff;
+}
+paper-button[raised].colored {
+    background: #dd2c00;
+    color: #fff;
+}
+paper-button[raised].colored:hover {
+    background: #bb2200;
+}
+paper-button[raised].colored::shadow #ripple {
+    color: #881a00;
+}
+paper-button.ness-project-card, paper-button.buttonWithIcon iron-icon {
+    margin-right: 8px;
+}
 
 
 paper-toolbar paper-icon-button {
