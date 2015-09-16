@@ -55,18 +55,15 @@
 <paper-drawer-panel>
     <div drawer id="drawerContainer">
         <ness-drawer-header first="Baptiste" last="Carlier" age="28" city="Villeneuve d'Ascq" country="France"></ness-drawer-header>
-        <paper-menu selected="{{route}}" attr-for-selected="data-route">
-            <paper-item>
-                <a data-route="accueil" href="/BCCom/"><iron-icon icon="home"></iron-icon>Accueil</a>
+        <paper-menu class="mainMenu" selected="{{route}}" attr-for-selected="data-route">
+            <paper-item data-route="accueil">
+                <a href="/BCCom/"><iron-icon icon="home"></iron-icon>Accueil</a>
             </paper-item>
-            <paper-item>
-                <a data-route="cv" href="/BCCom/cv"><iron-icon icon="account-circle"></iron-icon>Curriculum vit&aelig;</a>
+            <paper-item data-route="cv">
+                <a href="/BCCom/cv"><iron-icon icon="account-circle"></iron-icon>Curriculum vit&aelig;</a>
             </paper-item>
-            <paper-item>
-                <a data-route="realisations" href="/BCCom/realisations"><iron-icon icon="folder-open"></iron-icon>R&eacute;alisations</a>
-            </paper-item>
-            <paper-item>
-                <iron-icon icon="link"></iron-icon> Liens
+            <paper-item data-route="realisations">
+                <a href="/BCCom/realisations"><iron-icon icon="folder-open"></iron-icon>R&eacute;alisations</a>
             </paper-item>
         </paper-menu>
     </div>
