@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>BaptisteCarlier.com</title>
+
+    <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
+    <script src="./webcomponentsjs/webcomponents-lite.min.js"></script>
+
+    <!-- 2. Use an HTML Import to bring in some elements. -->
+    <link rel="import" href="./polymer/polymer.html">
+    <link rel="import" href="./paper-item/paper-item.html">
+    <link rel="import" href="./paper-menu/paper-menu.html">
+    <link rel="import" href="./paper-styles/paper-styles.html">
+    <link rel="import" href="./paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="./paper-scroll-header-panel/paper-scroll-header-panel.html">
+    <link rel="import" href="./paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="./paper-tabs/paper-tabs.html">
+    <link rel="import" href="./paper-tabs/paper-tab.html">
+    <link rel="import" href="./paper-card/paper-card.html">
+    <link rel="import" href="./paper-button/paper-button.html">
+    <link rel="import" href="./paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="./iron-icon/iron-icon.html">
+    <link rel="import" href="./iron-icons/communication-icons.html">
+    <link rel="import" href="./iron-icons/iron-icons.html">
+    <link rel="import" href="./iron-pages/iron-pages.html">
+    <link rel="import" href="./paper-radio-button/paper-radio-button.html">
+    <link rel="import" href="./paper-checkbox/paper-checkbox.html">
+
+    <link rel="import" href="./iron-list/iron-list.html">
+    <link rel="import" href="./iron-flex-layout/classes/iron-flex-layout.html">
+    <link rel="import" href="./iron-ajax/iron-ajax.html">
+    
+    <link rel="import" href="./ness-copyright/ness-copyright.html">
+    <link rel="import" href="./ness-drawer-header/ness-drawer-header.html">
+    <link rel="import" href="./ness-resume-item/ness-resume-item.html">
+    <link rel="import" href="./ness-project-card/ness-project-card.html">
+    
+    <link rel="import" href="./ness-github-api/ness-github-api.html">
+    
+    <!-- 4. Get the styles -->
+    <link shim-shadowdom rel="stylesheet" href="../static/css/main.css">
+    
+    
+  <style is="custom-style">
+      :root {
+        --accent-color: #dd2c00;
+        --paper-toolbar-background: #00bcd4;
+      }
+
+      body {
+        font-family: font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
+        margin: 0;
+        background-color: #F1F1F1;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        padding-bottom: 46px;
+      }
+          
+      a {
+        color:black;
+      }
+      paper-toolbar a {
+        color:white !important;
+      }
+
+      paper-toolbar {
+        background-color: var(--accent-color);
+        color: #fff;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.07);
+      }
+      
+      
+    #cards {
+      @apply(--layout-vertical);
+      @apply(--center-justified);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    paper-card {
+      width: 100%;
+      margin-top: 16px;
+    }
+          
+    ness-copyright {
+        --ness-copyright: {
+            margin-right: 20px;
+            margin-bottom: 60px;
+        };
+        --ness-copyright-link: {
+            color: var(--accent-color);
+        };
+    }
+    paper-card {
+      --paper-card-header-text: {
+        color: black;
+        letter-spacing: -0.01em;
+        line-height: 44px;
+        font-size: 24px;
+        font-weight: 400;
+        padding-bottom: 0px;
+      };
+    }
+        
+    span.info {
+        margin-right: 20px;
+    }
+  </style>
+    
+    
+    
+</head>
+<body unresolved class="bowercomponents">
+
+    <template is="dom-bind">
+        
+        <paper-toolbar>
+            <a href="../"><paper-icon-button icon="arrow-back"></paper-icon-button></a>
+            <span class="title">Elements Polymer <em>ness-</em></span>
+            <a href="http://www.polymer-project.org" target="_blank"><paper-icon-button icon="polymer"></paper-icon-button></a>
+            <a href="http://github.com/bapness" target="_blank"><paper-icon-button icon="link"></paper-icon-button></a>
+        </paper-toolbar>
+        
+        
+        
+            <ness-github-api
+            items="{{items}}"
+            sort="updated"
+            query="user:BapNesS ness"></ness-github-api>
+        <div id="cards">
+
+                <template is="dom-repeat" items="[[items]]">
+                    
+                    <paper-card id="shadow_demo" heading="[[item.name]]" animated-shadow>
+                      <div class="card-content">
+                          <span>[[item.description]]</span>
+                      </div>
+                      <div class="card-actions">
+                          <div class="horizontal end-justified layout">
+                            <div>
+                                <iron-icon icon="icons:star"></iron-icon>
+                                <span class="info">[[item.watchers]]</span>
+                                <iron-icon icon="communication:call-split"></iron-icon>
+                                <span class="info">[[item.forks_count]]</span>
+                                <a href="[[item.link]]" target="_blank"><paper-icon-button icon="link" title="link"></paper-icon-button></a>
+                            </div>
+                          </div>
+                      </div>
+                    </paper-card>
+                    
+                </template>
+        </div>
+        
+                        <ness-copyright begindate="2014" enddate="2015" name="BaptisteCarlier.com" href="http://www.baptistecarlier.com/"></ness-copyright>
+            
+    </template>
+    
+</body>
+</html>

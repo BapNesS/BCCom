@@ -34,12 +34,17 @@
     "iron-component-page": "PolymerElements/iron-component-page#~1.0.4",
     "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.1",
     "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.1",
+    "paper-tooltip": "PolymerElements/paper-tooltip#~1.0.1",
     "paper-icon-button": "PolymerElements/paper-icon-button#~1.0.3",
     "iron-list": "PolymerElements/iron-list#^1.0.0",
     "iron-ajax": "PolymerElements/iron-ajax#^1.0.0",
+    "paper-tabs": "PolymerElements/paper-tabs#~1.0.2",
+    "iron-jsonp-library": "PolymerElements/iron-jsonp-library#~1.0.3",
+    "paper-card": "PolymerElements/paper-card#~1.0.4",
     "ness-copyright": "BapNesS/ness-copyright#~0.1.1",
     "ness-drawer-header": "BapNesS/ness-drawer-header#~0.1.1",
     "ness-project-card": "BapNesS/ness-project-card#~0.2",
-    "ness-resume-item": "BapNesS/ness-resume-item#~0.1.1"
+    "ness-resume-item": "BapNesS/ness-resume-item#~0.1.1",
+    "ness-github-api": "BapNesS/ness-github-api#~0.1"
   }
 }
